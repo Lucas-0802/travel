@@ -51,3 +51,11 @@ docker compose up -d
 ```
 
 ### 🔧 5. Acessar o Navegador na Porta 5173 
+
+
+### 🔧 6. A aplicação cria o usuário Admin automaticamente
+
+```bash
+username: admin@admin.com
+password: admin123
+```
