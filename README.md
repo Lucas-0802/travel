@@ -59,3 +59,9 @@ docker compose up -d
 username: admin@admin.com
 password: admin123
 ```
+
+### 🔧 7. Rodando os Testes
+
+```bash
+docker compose exec laravel-1 php artisan test --filter=TravelOrdersServiceTest
+```
