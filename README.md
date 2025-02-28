@@ -11,7 +11,7 @@ Desenvolvido com **Laravel (API REST) & Vue.js (Frontend Interativo)**, o sistem
 - 🔹 **MySQL** - Banco de Dados  
 - 🔹 **Docker & Docker Compose** - Ambientes isolados  
 - 🔹 **JWT** - Autenticação segura  
-- 🔹 **Bootstrap & TailwindCSS** - UI responsiva  
+- 🔹 **Bootstrap** - UI responsiva  
 - 🔹 **PHPUnit** - Testes automatizados  
 
 ---
