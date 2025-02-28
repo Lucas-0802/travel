@@ -9,11 +9,11 @@ class TravelOrderPolicy
 {
     public function updateStatus(User $user): bool
     {
-        return $user->user_type === 'admin';
+        return $user->getUserType() === 'admin';
     }
 
     public function view(User $user, TravelOrder $order) : bool
     {
-        return $user->user_type === 'admin' || $user->id === $order->user_id;
+        return $user->getUserType() === 'admin' || $user->getId() === $order->getUserId();
     }
 }

@@ -13,7 +13,10 @@ class TravelTypesSeeder extends Seeder
         $types = ['Hotel', 'Plane', 'Bus', 'Car'];
 
         foreach ($types as $type) {
-            TravelType::create(['name' => $type]);
+            TravelType::updateOrCreate(
+                ['name' => $type],  
+                ['name' => $type]   
+            );
         }
     }
 }

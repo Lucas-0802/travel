@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 class Cities extends Model
@@ -13,7 +14,7 @@ class Cities extends Model
     protected $table = 'cities';
     protected $fillable = ['name'];
 
-    public function travelOrders()
+    public function travelOrders() : HasMany
     {
         return $this->hasMany(TravelOrder::class);
     }

@@ -14,13 +14,15 @@ class AdminUserSeeder extends Seeder
      */
     public function run(): void
     {
-        User::create([
-            'id' => Str::uuid(),
-            'name' => 'Admin',
-            'email' => 'admin@admin.com',
-            'password' => Hash::make('admin123'),
-            'user_type' => 'admin',
-        ]);
+        User::firstOrCreate(
+            ['email' => 'admin@admin.com'],
+            [
+                'id' => Str::uuid(),
+                'name' => 'Admin',
+                'password' => Hash::make('admin123'),
+                'user_type' => 'admin',
+            ]
+        );
     }
 }
 

@@ -12,7 +12,10 @@ class TravelOrderStatusSeeder extends Seeder
         $status_name = ['requested', 'approved', 'canceled', 'requested_cancellation'];
 
         foreach ($status_name as $status) {
-            TravelOrderStatus::create(['name' => $status]);
+            TravelOrderStatus::updateOrCreate(
+                ['name' => $status],  
+                ['name' => $status] 
+            );
         }
     }
 }
