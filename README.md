@@ -24,6 +24,30 @@ git clone https://github.com/seu-usuario/travel-order-manager.git
 cd travel-order-manager
 ```
 
-### 🔧 2. Entrar na pasta backend
+### 🔧 2. Criar o Arquivo .env com as Configurações do Banco de Dados
+```bash
+APP_NAME=Laravel
+APP_ENV=local
+APP_KEY=base64:zm1lvmYOqz9h6JeE9vZyUfp/o/l5/leYR1tqws/ocTw=
+APP_DEBUG=true
+APP_URL=http://localhost:8000
+
+DB_CONNECTION=mysql
+DB_HOST=127.0.0.1 
+DB_PORT=3306
+DB_DATABASE=laravel
+DB_USERNAME=root
+DB_PASSWORD=1234
+```
+
+### 🔧 3. Entrar na Pasta Backend
 ```bash
 cd backend
+```
+
+### 🔧 4. Subir os Containers 
+```bash
+docker compose up -d
+```
+
+### 🔧 5. Acessar o navegador na porta 5173 
