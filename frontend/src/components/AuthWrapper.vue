@@ -221,7 +221,7 @@ const register = async () => {
       name: registerData.value.name,
       email: registerData.value.email,
       password: registerData.value.password,
-      password_confirmation: registerData.value.password,
+      password_confirmation: registerData.value.password_confirmation,
     });
 
     feedbackMessage.value = t(`messages.${response.data.message}`);
@@ -235,14 +235,17 @@ const register = async () => {
       password_confirmation: "",
     };
   } catch (error) {
-    feedbackMessage.value =
-      error.response?.data?.error || "Erro ao registrar usuário.";
-    feedbackType.value = "error";
+    if(error instanceof AxiosError) {
+      const message: string[] = Object.keys((error as AxiosError).response?.data?.messages).map((key) => {
+        return (error as AxiosError).response?.data?.messages[key][0]
+      });
+      feedbackMessage.value = t(`messages.${message[0]}`);
+      feedbackType.value = "error";
+    }
   } finally {
     loading.value = false;
   }
 };
-
 
 const toggleForm = () => {
   isLoginForm.value = !isLoginForm.value;

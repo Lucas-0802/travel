@@ -28,6 +28,6 @@ class NotificationController extends Controller
     {   
         $id = $request->validated()['id'];
         $response = $this->notificationService->discard($id);
-        return response()->json($response, $response['status']);
+        return response()->json($response, 200);
     }
 }
