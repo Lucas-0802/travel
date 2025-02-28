@@ -1,0 +1,147 @@
+services:
+# Container de Aplicação Laravel-1
+  laravel-1:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    container_name: laravel-1
+    restart: always
+    tty: true
+    environment:
+      APP_ENV: ${APP_ENV}
+      APP_KEY: ${APP_KEY}
+      APP_DEBUG: ${APP_DEBUG}
+      APP_URL: ${APP_URL}
+      DB_HOST: mysql
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - .:/var/www/laravel
+    depends_on:
+      - mysql
+    networks:
+      - laravel_app
+    command: >
+      sh -c "
+      echo '📦 Installing Composer dependencies...' &&
+      composer install --no-dev --optimize-autoloader &&
+
+      echo '🗑 Clearing Laravel cache...' &&
+      php artisan config:clear &&
+      php artisan cache:clear &&
+
+      echo '⚡Running migrations...' &&
+      php artisan migrate --force &&
+
+      echo '⚡Running migrations...' &&
+      php artisan db:seed --force &&
+
+      echo '🔐 Publishing Laravel Sanctum...' &&
+      php artisan vendor:publish --provider='Laravel\\Sanctum\\SanctumServiceProvider' &&
+
+      echo '🌐 Configuring permissions...' &&
+      chmod -R 775 storage bootstrap/cache &&
+      chown -R www-data:www-data /var/www/laravel &&
+
+      echo '✅ Initialization complete!' &&
+      exec php-fpm"
+
+
+# Container de Aplicação Laravel-2
+  laravel-2:
+    build:
+      context: .
+      dockerfile: ./docker/php/Dockerfile
+    container_name: laravel-2
+    restart: always
+    tty: true
+    environment:
+      APP_ENV: ${APP_ENV}
+      APP_KEY: ${APP_KEY}
+      APP_DEBUG: ${APP_DEBUG}
+      APP_URL: ${APP_URL}
+      DB_HOST: mysql
+      DB_DATABASE: ${DB_DATABASE}
+      DB_USERNAME: ${DB_USERNAME}
+      DB_PASSWORD: ${DB_PASSWORD}
+    volumes:
+      - .:/var/www/laravel
+    depends_on:
+      - mysql
+    networks:
+      - laravel_app
+    command: >
+      sh -c "
+      echo '🔑 Generating application key...' &&
+      php artisan key:generate &&
+
+      echo '✅ Initialization complete!' &&
+      exec php-fpm"
+
+
+# Container de Aplicação Node
+  node:
+    build:
+      context: ../frontend  
+      dockerfile: docker/Dockerfile
+    container_name: node-container
+    restart: always
+    environment:
+      - VITE_API_BASE_URL=http://localhost:80/api
+    ports:
+      - "5173:5173"
+    volumes:
+      - ../frontend:/app
+      - /app/node_modules
+    stdin_open: true
+    tty: true
+    depends_on:
+      - nginx
+    networks:
+      - laravel_app
+
+
+# Container Mysql
+  mysql:
+    image: mysql:8.0
+    container_name: mysql-container
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+      MYSQL_USER: ${DB_USERNAME}
+      MYSQL_PASSWORD: ${DB_PASSWORD}
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - laravel_app
+
+
+# Container Nginx
+  nginx:
+    image: nginx:alpine
+    container_name: nginx-container
+    restart: always
+    volumes:
+      - .:/var/www/laravel
+      - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
+    ports:
+      - "80:80"
+    depends_on:
+      - laravel-1
+      - laravel-2
+    networks:
+      - laravel_app
+
+networks:
+  laravel_app:
+    driver: bridge
+
+volumes:
+  mysql-data:
+    driver: local
+  redis-data:
+    driver: local

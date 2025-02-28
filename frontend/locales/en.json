@@ -1,0 +1,144 @@
+{
+  "app": {
+    "title": "ONFLY",
+    "welcome": "{appName}",
+    "alt_logo": "Illustration of a rocket | Ilustração de um foguete",
+    "login": "Login to your account | Faça login na sua conta",
+    "register": "Create your free account | Crie sua conta gratuita",
+    "forgot_password": "Forgot Password | Esqueceu a senha",
+    "enter_email_reset": "Enter your email to reset your password | Digite seu e-mail para redefinir sua senha",
+    "reset_password": "Reset Password | Redefinir senha",
+    "email": "Email | E-mail",
+    "password": "Password | Senha",
+    "passwordConfirmation": "Password Confirmation | Confirmação de senha",
+    "name": "Name | Nome",
+    "no_account": "Don't have an account? | Não tem uma conta?",
+    "has_account": "Already have an account? | Já tem uma conta?",
+    "sign_up": "Sign Up | Cadastre-se",
+    "sign_in": "Sign In | Entrar",
+    "send": "Send | Enviar",
+    "go_back": "Go Back | Voltar",
+    "success_message": "User data updated successfully! | Dados do usuário atualizados com sucesso!",
+    "error_message": "Error updating user data. | Erro ao atualizar os dados do usuário.",
+    "email_sent": "Recovery email sent! Check your inbox. | E-mail de recuperação enviado! Verifique sua caixa de entrada.",
+    "create_account": "Create Account | Criar conta"
+  },
+
+  "dashboard": {
+    "overview": "Dashboard Overview | Visão geral do painel",
+    "new_order": "+ New Order | + Novo Pedido",
+    "total_orders": "Total Orders | Total de Pedidos",
+    "requested": "Requested | Solicitado",
+    "approved": "Approved | Aprovado",
+    "canceled": "Canceled | Cancelado",
+    "requested_cancellation": "Requested Cancellation | Solicitado Cancelamento"
+  },
+
+  "header": {
+    "title": "ONFLY",
+    "hello": "Hello, {name} | Olá, {name}",
+    "settings": "Settings | Configurações",
+    "logout": "Logout | Sair"
+  },
+
+  "order": {
+    "id": "Order ID | ID do Pedido",
+    "status": "Status | Status",
+    "new_order": "New Order | Novo Pedido",
+    "origin": "Origin | Origem",
+    "destination": "Destination | Destino",
+    "select_origin": "Select the origin | Selecione a origem",
+    "select_status": "Select the status | Selecione o status",
+    "select_destination": "Select the destination | Selecione o destino",
+    "clean_filters": "Clean Filters | Limpar Filtros",
+    "apply_filters": "Apply Filters | Aplicar Filtros",
+    "departure_date": "Departure Date | Data de Ida",
+    "return_date": "Return Date | Data de Volta",
+    "cancel": "Cancel | Cancelar",
+    "create_order": "Create Order | Criar Pedido",
+    "processing": "Processing... | Processando...",
+    "success_message": "Order successfully created! | Pedido criado com sucesso!",
+    "error_message": "Error creating the order. | Erro ao criar o pedido.",
+    "type_travel": "Type of Travel | Tipo de Viagem",
+    "select_type": "Select the type of travel | Selecione o tipo de viagem"
+  },
+
+  "user": {
+    "settings": "User Settings | Configurações do Usuário",
+    "name": "Name | Nome",
+    "email": "Email | E-mail",
+    "password": "Password | Senha",
+    "cancel": "Cancel | Cancelar",
+    "save": "Save | Salvar",
+    "processing": "Processing... | Processando...",
+    "success_message": "User data updated successfully! | Dados do usuário atualizados com sucesso!",
+    "error_message": "Error updating user data. | Erro ao atualizar os dados do usuário."
+  },
+
+  "orders": {
+    "title": "Travel Orders | Ordens de Viagem",
+    "id": "Order ID | ID do Pedido",
+    "requester": "Requester Name | Nome do Solicitante",
+    "origin": "Origin | Origem",
+    "destination": "Destination | Destino",
+    "period": "Period | Período",
+    "status": "Status | Status",
+    "actions": "Actions | Ações",
+    "select": "Select | Selecionar",
+    "approve": "Approve | Aprovar",
+    "cancel": "Cancel | Cancelar",
+    "completed": "Completed | Concluído",
+    "pending": "Pending | Pendente",
+    "approved": "Approved | Aprovado",
+    "canceled": "Canceled | Cancelado",
+    "cancel_order": "Cancel Order | Cancelar Pedido",
+    "request_cancellation": "Request Cancellation | Solicitar Cancelamento",
+    "accept": "Accept | Aceitar",
+    "reject": "Reject | Rejeitar",
+    "travel_type": "Travel Type | Tipo de Viagem"
+  },
+
+  "pagination": {
+    "previous": "Previous | Anterior",
+    "next": "Next | Próximo"
+  },
+
+  "messages": {
+    "user_registered_successfully": "User registered successfully! | Usuário cadastrado com sucesso!",
+    "user_logged_in_successfully": "Login successful! | Login realizado com sucesso!",
+    "invalid_credentials": "Invalid credentials. | Credenciais inválidas.",
+    "auth_failed": "Authentication failed. | Falha na autenticação.",
+    "registration_failed": "Registration failed, please try again. | Falha ao cadastrar, tente novamente.",
+    "name_required": "The name field is required. | O campo nome é obrigatório.",
+    "email_required": "The email field is required. | O campo e-mail é obrigatório.",
+    "email_invalid": "Please enter a valid email. | Por favor, insira um e-mail válido.",
+    "email_taken": "This email is already in use. | Este e-mail já está em uso.",
+    "password_required": "The password field is required. | O campo senha é obrigatório.",
+    "password_mismatch": "Passwords do not match. | As senhas não coincidem.",
+    "user_registration_failed": "User registration failed. | Falha ao cadastrar usuário.",
+    "travel_order_created_successfully": "Travel order created successfully! | Ordem de viagem criada com sucesso!",
+    "order_created_successfully": "Order created successfully! | Pedido criado com sucesso!",
+    "please_provide_the_trip_origin": "Please provide the trip origin. | Por favor, informe a origem da viagem.",
+    "origin_must_be_a_string": "The origin must be a valid string. | A origem deve ser um texto válido.",
+    "please_provide_the_trip_destination": "Please provide the trip destination. | Por favor, informe o destino da viagem.",
+    "destination_must_be_a_string": "The destination must be a valid string. | O destino deve ser um texto válido.",
+    "please_provide_the_departure_date": "Please provide the departure date. | Por favor, informe a data de ida.",
+    "departure_date_must_be_a_valid_date": "The departure date must be a valid date. | A data de ida deve ser uma data válida.",
+    "please_provide_the_return_date": "Please provide the return date. | Por favor, informe a data de volta.",
+    "return_date_must_be_a_valid_date": "The return date must be a valid date. | A data de volta deve ser uma data válida.",
+    "fetch_orders": "Error fetching orders. Please try again later. | Erro ao buscar pedidos. Tente novamente mais tarde.",
+    "order_submission_failed": "Order submission failed. Please check the entered information. | Falha ao criar o pedido. Verifique as informações inseridas.",
+    "invalid_return_date": "The return date must be later than the departure date. | A data de volta deve ser maior que a data de ida.",
+    "invalid_departure_date": "The departure date must be later than the current date. | A data de ida deve ser maior que a data atual.",
+    "status_updated_successfully": "Status updated successfully! | Status atualizado com sucesso!",
+    "please_provide_the_trip_type": "Please provide the trip type. | Por favor, informe o tipo de viagem."
+  },
+  "filters": {
+    "title": "Filters | Filtros"
+  },
+  "notifications": {
+    "no_notifications": "No notifications | Sem notificações",
+    "descart" : "Descart | Descartar",
+    "title": "Notifications | Notificações"
+  }
+}

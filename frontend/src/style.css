@@ -1,0 +1,73 @@
+:root {
+  --primary-color: #009efb;
+  --secondary-color: #8b8d97;
+  --gray-color: #f0f0f2;
+  --orange-color: #ff5a05;
+  --background-color: #f4f8ff;
+  --error-color: #9c0707ce;
+  --success-color: #0f750fd7;
+  --purple-color: #4e1274c2;
+  --warning-color: #ffcc00;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif; 
+  overflow: auto;
+}
+
+.container-fluid {
+  overflow: auto;
+  height: 100vh;
+}
+
+.half-screen {
+  height: 50%;
+}
+
+.form-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 35%;
+  height: 60%;
+  max-height: 100vh;
+}
+
+.background-primary-color {
+  background-color: var(--primary-color);
+}
+
+.background-primary-color:hover {
+  background-color: var(--primary-color);
+}
+
+.new-order-btn {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 10px;
+  border: 1px solid var(--primary-color);
+  cursor: pointer;
+}
+
+.new-order-btn:hover {
+  border: 1px solid var(--primary-color);
+  color: var(--primary-color);
+}
+
+.cancel {
+  border: 1px solid var(--primary-color);
+  padding: 10px;
+  color: var(--primary-color);
+}
+
+.cancel:hover {
+  color: var(--primary-color);
+}
