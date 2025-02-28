@@ -21,10 +21,15 @@ Desenvolvido com **Laravel (API REST) & Vue.js (Frontend Interativo)**, o sistem
 ### 🔧 1. Clonar o Repositório
 ```bash
 git clone https://github.com/Lucas-0802/travel.git
-cd travel-order-manager
+cd travel
 ```
 
-### 🔧 2. Criar o Arquivo .env com as Configurações do Banco de Dados
+### 🔧 2. Entrar na Pasta Backend
+```bash
+cd backend
+```
+
+### 🔧 3. Criar o Arquivo .env com as Configurações do Banco de Dados
 ```bash
 APP_NAME=Laravel
 APP_ENV=local
@@ -38,11 +43,6 @@ DB_PORT=3306
 DB_DATABASE=corporate_travel
 DB_USERNAME=admin
 DB_PASSWORD=1234
-```
-
-### 🔧 3. Entrar na Pasta Backend
-```bash
-cd backend
 ```
 
 ### 🔧 4. Subir os Containers 
