@@ -20,7 +20,7 @@ Desenvolvido com **Laravel (API REST) & Vue.js (Frontend Interativo)**, o sistem
 
 ### 🔧 1. Clonar o Repositório
 ```bash
-git clone https://github.com/seu-usuario/travel-order-manager.git
+git clone [https://github.com/seu-usuario/travel-order-manager.git](https://github.com/Lucas-0802/travel.git)
 cd travel-order-manager
 ```
 
