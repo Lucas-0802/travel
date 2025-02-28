@@ -22,3 +22,8 @@ Desenvolvido com **Laravel (API REST) & Vue.js (Frontend Interativo)**, o sistem
 ```bash
 git clone https://github.com/seu-usuario/travel-order-manager.git
 cd travel-order-manager
+```
+
+### 🔧 2. Entrar na pasta backend
+```bash
+cd backend
