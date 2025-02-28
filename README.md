@@ -35,8 +35,8 @@ APP_URL=http://localhost:8000
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1 
 DB_PORT=3306
-DB_DATABASE=laravel
-DB_USERNAME=root
+DB_DATABASE=corporate_travel
+DB_USERNAME=admin
 DB_PASSWORD=1234
 ```
 
@@ -50,4 +50,4 @@ cd backend
 docker compose up -d
 ```
 
-### 🔧 5. Acessar o navegador na porta 5173 
+### 🔧 5. Acessar o Navegador na Porta 5173 
