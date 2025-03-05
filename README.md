@@ -1,36 +1,42 @@
-# 🌍 Travel Order Manager ✈️
+# 🌍 Travel Order Manager ✈️  
+**Sistema Full Stack para gestão de pedidos de viagens corporativas!**  
 
-Bem-vindo ao **Travel Order Manager**, um sistema Full Stack para **gestão de pedidos de viagens corporativas**.  
-Desenvolvido com **Laravel (API REST) & Vue.js (Frontend Interativo)**, o sistema permite que usuários realizem solicitações de viagens, filtrem pedidos e recebam notificações sobre aprovações e cancelamentos. 🎯
+Desenvolvido com **Laravel (API REST) & Vue.js (Frontend SPA)**, este sistema permite que usuários realizem solicitações de viagens, filtrem pedidos e recebam notificações sobre aprovações e cancelamentos. 🚀  
 
----
-
-## 📦 Tecnologias Utilizadas
-- 🔹 **Laravel 10** - Backend API  
-- 🔹 **Vue.js 3** - Frontend SPA  
-- 🔹 **MySQL** - Banco de Dados  
-- 🔹 **Docker & Docker Compose** - Ambientes isolados  
-- 🔹 **JWT** - Autenticação segura  
-- 🔹 **Bootstrap** - UI responsiva  
-- 🔹 **PHPUnit** - Testes automatizados  
+🔹 **Gerencie pedidos de viagem com eficiência**  
+🔹 **Acompanhe aprovações e cancelamentos em tempo real**  
+🔹 **Interface intuitiva e responsiva**  
 
 ---
 
-## 🚀 Como Rodar o Projeto
+## 📦 Tecnologias Utilizadas  
 
-### 🔧 1. Clonar o Repositório
+🛠 **Backend:** Laravel 10 (API REST)  
+🎨 **Frontend:** Vue.js 3 (SPA - Aplicação de Página Única)  
+🗄 **Banco de Dados:** MySQL  
+🐳 **Containers:** Docker & Docker Compose  
+🔐 **Autenticação:** JWT (JSON Web Token)  
+💎 **UI:** Bootstrap  
+✅ **Testes:** PHPUnit  
+
+---
+
+## 🚀 Como Rodar o Projeto  
+
+### 1️⃣ Clonar o Repositório  
 ```bash
 git clone https://github.com/Lucas-0802/travel.git
 cd travel
 ```
 
-### 🔧 2. Entrar na Pasta Backend
+### 2️⃣ Configurar o Backend  
 ```bash
 cd backend
 ```
 
-### 🔧 3. Criar o Arquivo .env com as Configurações do Banco de Dados
-```bash
+Criar o arquivo **.env** e configurar o banco de dados:  
+
+```ini
 APP_NAME=Laravel
 APP_ENV=local
 APP_KEY=base64:zm1lvmYOqz9h6JeE9vZyUfp/o/l5/leYR1tqws/ocTw=
@@ -45,23 +51,27 @@ DB_USERNAME=admin
 DB_PASSWORD=1234
 ```
 
-### 🔧 4. Subir os Containers 
+### 3️⃣ Subir os Containers 🚢  
 ```bash
 docker compose up -d
 ```
 
-### 🔧 5. Acessar o Navegador na Porta 5173 
+### 4️⃣ Acessar o Navegador  
+Abra **http://localhost:5173** para visualizar a aplicação.  
 
-
-### 🔧 6. A aplicação cria o usuário Admin automaticamente
-
+### 5️⃣ Usuário Admin Padrão  
+🔑 **Login Automático Criado**:  
 ```bash
-username: admin@admin.com
-password: admin123
+Username: admin@admin.com
+Password: admin123
 ```
 
-### 🔧 7. Rodando os Testes
-
+### 6️⃣ Rodando os Testes ⚙️  
 ```bash
 docker compose exec laravel-1 php artisan test --filter=TravelOrdersServiceTest
 ```
+
+---
+
+🎯 **Pronto! Agora você pode gerenciar viagens de forma prática e eficiente!**  
+🚀 **Contribua, sugira melhorias e ajude a evoluir o Travel Order Manager!**  
