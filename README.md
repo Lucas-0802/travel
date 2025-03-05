@@ -5,7 +5,7 @@ Desenvolvido com **Laravel (API REST) & Vue.js (Frontend SPA)**, este sistema pe
 
 🔹 **Gerencie pedidos de viagem com eficiência**  
 🔹 **Acompanhe aprovações e cancelamentos em tempo real**  
-🔹 **Interface intuitiva e responsiva**  
+🔹 **Interface intuitiva**  
 
 ---
 
