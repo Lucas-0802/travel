@@ -68,6 +68,7 @@ Password: admin123
 
 ### 6️⃣ Rodando os Testes ⚙️  
 ```bash
+docker compose exec laravel-1 compose install
 docker compose exec laravel-1 php artisan test --filter=TravelOrdersServiceTest
 ```
 
